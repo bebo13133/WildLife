@@ -46,7 +46,7 @@ router.post('/register', async (req, res) => {
     } catch (errors) {
 
         const errorMessage = extractErrorMessage(errors)
-        res.status(500).render('/', { error: errorMessage })
+        res.status(500).render('users/register', { error: errorMessage })
     }
 });
 
