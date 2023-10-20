@@ -20,10 +20,9 @@ router.post('/login', async (req, res) => {
 
     } catch (err) {
 
-        // const errorMessage = extractErrorMessage(err)
+        const errorMessage = extractErrorMessage(err)
 
-        // res.status(400).render('users/login', { error: errorMessage })
-        res.status(500).render('users/login', { error: errors })
+        res.status(400).render('users/login', { error: errorMessage })
     }
 
 });
