@@ -7,7 +7,7 @@ const postSchema = new mongoose.Schema({
 title: {
     type: String,
     required: [true, 'Name is required'],
-    minLength:[4, 'characters required minimum with 3 length'],
+    minLength:[4, 'characters required minimum with 4 length'],
     maxLength:[50, 'characters required maximum with 40 length'],
    
 },
@@ -19,7 +19,7 @@ keyWord:{
 location:{
     type: String,
     required: [true, 'Color is required'],
-    minLength:[4, 'characters required minimum with 3 length'],
+    minLength:[3, 'characters required minimum with 3 length'],
     maxLength:[50, 'characters required maximum with 40 length'],
 
 },
@@ -47,8 +47,8 @@ image:{
 description:{
     type: String,
     required: [true, 'Description is required'],
-    minLength:[10, 'characters required minimum with 3 length'],
-    maxLength:[1000, 'characters required maximum with 200 length'],
+    minLength:[4, 'characters required minimum with 4 length'],
+    maxLength:[1000, 'characters required maximum with 1000 length'],
 },
 votes: {
     type: [mongoose.Types.ObjectId],
