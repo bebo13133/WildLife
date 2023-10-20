@@ -7,5 +7,7 @@ exports.extractErrorMessage = (error) => {
         return Object.values(error.errors).map(err => err.message)
     } else if (error) {
         return [error.message]
+    }else{
+        return error
     }
 }
