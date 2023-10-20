@@ -3,9 +3,18 @@ const { MongooseError, Error } = require('mongoose')
 
 exports.extractErrorMessage = (error) => {
 
-    if (error instanceof MongooseError || error instanceof Error) {
-        return Object.values(error.errors).map(err => err.message)
-    } else if (error) {
-        return [error.message]
-    }
+    const isMongooseError = error instanceof MongooseError;
+    if (isMongooseError) {
+        return Object.values(error.errors).map(e => e.message);
+    } else {
+        return [error.message];
 }
+}
+// exports.extractErrors = (error) => {
+//     const isMongooseError = error instanceof MongooseError;
+//     if (isMongooseError) {
+//         return Object.values(error.errors).map(e => e.message);
+//     } else {
+//         return [error.message];
+//     }
+// }
