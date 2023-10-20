@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const errorMessage = extractErrorMessage(err)
     
 
-        res.status(500).render('/', { error: errorMessage })
+        res.render('/', { error: errorMessage })
   }
 
 });
